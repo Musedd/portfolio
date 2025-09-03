@@ -1,0 +1,33 @@
+nav {
+    width: 100%;
+    background: #000000;
+    color: #ffffff;
+    padding-top: 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+
+    .brand{
+        //padding-left: 60px;
+        font-weight: 800;
+        font-size: 20px;
+        color: #e85002;
+        //visibility: hidden;
+    }
+
+    .menu{
+       //padding-right: 100px;
+
+       li{
+        display: inline-block;
+        list-style: none;
+        margin: 5px 20px;
+        font-size: 16px;
+       }
+    }
+
+}

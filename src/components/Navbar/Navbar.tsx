@@ -3,8 +3,9 @@ import './Navbar.scss'
 
 const Navbar = () => {
   return (
-    <nav>
-        <ul>
+    <nav className='container'>
+        <a href="#" className='brand'>Edvaldo.</a>
+        <ul className='menu'>
             <li>About me</li>
             <li>Experience</li>
             <li>Skills</li>
