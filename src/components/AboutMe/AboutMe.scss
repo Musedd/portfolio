@@ -1,0 +1,19 @@
+.aboutme {
+
+    .aboutme-content {
+        max-width: 800px;
+
+        .title {
+            color: white;
+            font-size: clamp(3rem, 4vw, 3rem);
+        }
+
+        .caption {
+            padding-top: 20px;
+            color: #a7a7a7;
+            font-size: clamp(1rem, 1.2vw, 1.125rem);
+            line-height: 1.6;
+        }
+    }
+    
+}

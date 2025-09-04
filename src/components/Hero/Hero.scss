@@ -31,6 +31,7 @@
     .hero-photo img{
         width: min(420px, 40vw);
         object-fit: cover;
+        position: sticky;
     }
 
     .content-side {
