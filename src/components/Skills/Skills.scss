@@ -1,0 +1,61 @@
+.skills {
+  color: #ffffff;
+  margin-top: 10px;
+
+  .title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 2rem;
+  }
+
+  .skill-list-container {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    .skill-card {
+      width: 150px;
+      height: 150px;
+      background: #a7a7a7;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: translateY(-6px);
+        cursor: pointer;
+      }
+
+      img {
+        max-width: 80px;
+        max-height: 80px;
+        object-fit: contain;
+      }
+
+      p {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #333333;
+        color: #fff;
+        font-size: 0.9rem;
+        text-align: center;
+        padding: 0.3rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      &:hover p {
+        opacity: 1;
+      }
+    }
+  }
+}

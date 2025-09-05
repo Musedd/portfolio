@@ -5,6 +5,7 @@ import profileImg from './assets/ProfileImg.jpg'
 import './App.scss'
 import AboutMe from './components/AboutMe/AboutMe'
 import Experience from './components/Experience/Experience'
+import Skills from './components/Skills/Skills'
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       </section>
 
       <section id='experience' className="experience container"><Experience/></section>
+      <section id='skills' className='skills container'><Skills/></section>
      
     </div>
   )
