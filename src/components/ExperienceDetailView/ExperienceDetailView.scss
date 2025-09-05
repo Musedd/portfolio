@@ -1,0 +1,15 @@
+.detail-view-empty {
+    color: #333333;
+}
+
+.detail-view {
+    background: #a7a7a7;
+    max-height: fit-content;
+    color: #333333;
+    padding: 2rem;
+    border-radius: 12px;
+
+    ul {
+        margin-top: 1rem;
+    }
+}

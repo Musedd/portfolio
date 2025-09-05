@@ -5,6 +5,7 @@
     grid-template-columns: 1fr min(420px, 40vw);
     gap: clamp(2rem, 6vw, 5rem);
     margin-top: var(--nav-h);
+    max-height: 1950px;
 
     .intro-left > section {
         min-height: calc(100vh - var(--nav-h));
@@ -25,4 +26,9 @@
 
         }
 
+}
+
+.experience {
+  margin-top: 10rem; 
+  display: grid;
 }

@@ -4,13 +4,14 @@ import Hero from './components/Hero/Hero'
 import profileImg from './assets/ProfileImg.jpg'
 import './App.scss'
 import AboutMe from './components/AboutMe/AboutMe'
+import Experience from './components/Experience/Experience'
 
 const App = () => {
   return (
     <div>
       <Navbar/>
 
-      <main className="intro container">
+      <section className="intro container">
         <div className="intro-left">
           <section id='hero'><Hero/></section>
           <section id='about'><AboutMe/></section>
@@ -18,9 +19,10 @@ const App = () => {
 
         <aside className='intro-right'>
           <img className='hero-photo' src={profileImg} alt="" />
-        </aside>
-        
-      </main>
+        </aside>        
+      </section>
+
+      <section id='experience' className="experience container"><Experience/></section>
      
     </div>
   )
