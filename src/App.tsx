@@ -6,6 +6,7 @@ import './App.scss'
 import AboutMe from './components/AboutMe/AboutMe'
 import Experience from './components/Experience/Experience'
 import Skills from './components/Skills/Skills'
+import Projects from './components/Projects/Projects'
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
 
       <section id='experience' className="experience container"><Experience/></section>
       <section id='skills' className='skills container'><Skills/></section>
+      <section id='projects' className='projects container'><Projects/></section>
      
     </div>
   )
