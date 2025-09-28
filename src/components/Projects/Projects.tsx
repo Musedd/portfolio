@@ -4,7 +4,7 @@ import { projects } from '../../data/projectData'
 
 const Projects = () => {
   return (
-    <div className='projects container'>
+    <>
         <h1 className="title">Projects</h1>
         <div className="projets-list-container">
             <ul className="project-list">
@@ -20,7 +20,7 @@ const Projects = () => {
             <p>These are only some of the projects I've worked on. Check out my <a href="">Github</a> for more insights and code examples.</p>
         </div>
     
-    </div>
+    </>
   )
 }
 

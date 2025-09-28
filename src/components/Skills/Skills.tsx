@@ -5,7 +5,7 @@ import type { SkillItems } from '../../data/skillsData'
 
 const Skills = () => {
   return (
-    <div className='skills container'>
+    <>
         <h1 className="title">Skills</h1>
         <div className='skill-list-container'>
             <ul className="skill-list">
@@ -19,7 +19,7 @@ const Skills = () => {
             </ul>
         </div>
 
-    </div>
+    </>
   )
 }
 

@@ -2,14 +2,18 @@
     color: #ffffff;
 
     .title {
-        font-size: clamp(3rem, 4vw, 3rem);
+        font-size: clamp(3rem, 4vw, 4rem);
+        margin-bottom: 2rem;
     }
 
     .experience-layout {
         display: grid;
         grid-template-columns: 1fr 2fr;
         gap: 2rem;
-        margin-top: 2rem;
+
+        .experience-detail-mobile {
+            display: none; /* unsichtbar auf Desktop */
+        }
 
         .experience-list {
             display: flex;
@@ -20,7 +24,7 @@
                 padding: 1rem;
                 border: 3px solid transparent;
                 border-radius: 10px;
-                transition: border-color 0.3s ease;
+                transition: border-color 0.3s ease; 
 
                 .role span {
                             color: #e85002;
@@ -50,3 +54,40 @@
 
    
 }
+
+@media (max-width: 900px) {
+  .experience {
+    .experience-layout {
+      display: block; 
+    }
+
+    .experience-detail-desktop {
+      display: none;   
+    }
+
+    .experience-detail-mobile {
+      display: block; 
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #1a1a1a;
+      padding: 2rem;
+      z-index: 1000;
+      overflow-y: auto;
+
+      .close-btn {
+        background: transparent;
+        border: none;
+        color: #fff;
+        font-size: 2rem;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+

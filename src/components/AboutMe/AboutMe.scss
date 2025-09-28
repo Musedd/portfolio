@@ -1,11 +1,10 @@
-.aboutme {
-
     .aboutme-content {
+        text-align: left;
         max-width: 800px;
 
         .title {
             color: white;
-            font-size: clamp(3rem, 4vw, 3rem);
+            font-size: clamp(3rem, 4vw, 4rem);
         }
 
         .caption {
@@ -15,5 +14,12 @@
             line-height: 1.6;
         }
     }
-    
+
+    @media (max-width: 900px) {
+  .aboutme-content {
+    text-align: center; /* Text mittig */
+    margin: 0 auto;     /* Block mittig */
+    padding: 0 1rem;    /* etwas Innenabstand */
+  }
 }
+    

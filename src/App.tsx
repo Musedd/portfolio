@@ -7,13 +7,15 @@ import AboutMe from './components/AboutMe/AboutMe'
 import Experience from './components/Experience/Experience'
 import Skills from './components/Skills/Skills'
 import Projects from './components/Projects/Projects'
+import Contact from './components/Contact/Contact'
+import Footer from './components/Footer/Footer'
 
 const App = () => {
   return (
     <div>
       <Navbar/>
 
-      <section className="intro container">
+      <div className="intro container">
         <div className="intro-left">
           <section id='hero'><Hero/></section>
           <section id='about'><AboutMe/></section>
@@ -22,11 +24,14 @@ const App = () => {
         <aside className='intro-right'>
           <img className='hero-photo' src={profileImg} alt="" />
         </aside>        
-      </section>
+      </div>
 
       <section id='experience' className="experience container"><Experience/></section>
       <section id='skills' className='skills container'><Skills/></section>
       <section id='projects' className='projects container'><Projects/></section>
+      <section id='contact' className='contact container'><Contact/></section>
+      <section id='footer' className='footer container'><Footer/></section>
+
      
     </div>
   )
