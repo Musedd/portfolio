@@ -1,7 +1,6 @@
-import React from 'react'
 import './Skills.scss'
 import {skills} from '../../data/skillsData'
-import type { SkillItems } from '../../data/skillsData'
+
 
 const Skills = () => {
   return (

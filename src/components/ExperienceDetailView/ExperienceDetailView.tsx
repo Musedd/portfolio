@@ -1,4 +1,3 @@
-import React from "react";
 import type { ExperienceItem } from "../../data/experienceData";
 import "./ExperienceDetailView.scss";
 

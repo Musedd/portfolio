@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './Experience.scss'
 import { experiences } from '../../data/experienceData'
 import type { ExperienceItem } from '../../data/experienceData'
