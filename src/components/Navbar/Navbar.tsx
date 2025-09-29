@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import './Navbar.scss'
 import menu_icon from '../../assets/menu-icon.png'
 import { Link } from "react-scroll";
