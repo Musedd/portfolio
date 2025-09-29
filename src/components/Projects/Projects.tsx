@@ -17,7 +17,7 @@ const Projects = () => {
                     </li>
                 ))}
             </ul>
-            <p>These are only some of the projects I've worked on. Check out my <a href="">Github</a> for more insights and code examples.</p>
+            <p>Check out my <a target="_blank" href="https://github.com/Musedd">Github</a> for more insights and code examples.</p>
         </div>
     
     </>

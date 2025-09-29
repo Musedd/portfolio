@@ -55,6 +55,10 @@
 
   /* Rechte Spalte: Formular */
   .contact-right-col {
+    span {
+      color:#a7a7a7;
+    }
+
     form {
       display: flex;
       flex-direction: column;

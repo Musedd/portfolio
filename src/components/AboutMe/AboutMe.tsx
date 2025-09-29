@@ -6,7 +6,10 @@ const AboutMe = () => {
     <>
         <div className="aboutme-content">
             <h1 className='title'>About me</h1>
-            <p className='caption'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <p className='caption'>
+              I am a Computer Engineering student in my final semester, passionate about Cloud Computing, DevOps, and Web Development. I discovered my love for coding during my studies and enjoy building projects that challenge me to learn and solve complex problems.<br/>
+               I have gained hands-on experience as a working student in DevOps, QA, and AI-driven projects at Infineon and Intive. In addition, I enjoy creating personal projects such as web applications and AI-driven prototypes that allow me to explore new technologies. Outside of tech, I am a passionate basketball player who values teamwork and continuous improvement, qualities that also shape how I approach my work.
+            </p>
         </div>
         
     </>

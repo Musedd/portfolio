@@ -9,16 +9,29 @@ import Skills from './components/Skills/Skills'
 import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
+import { useInView } from './hooks/useInView'
 
 const App = () => {
+  const { ref: heroRef, inView: heroInView } = useInView(0.2)
+  const { ref: aboutRef, inView: aboutInView } = useInView(0.2)
+  const { ref: expRef, inView: expInView } = useInView(0.2)
+  const { ref: skillsRef, inView: skillsInView } = useInView(0.2)
+  const { ref: projectsRef, inView: projectsInView } = useInView(0.2)
+  const { ref: contactRef, inView: contactInView } = useInView(0.2)
+  const { ref: footerRef, inView: footerInView } = useInView(0.2)
+
   return (
     <div>
       <Navbar/>
 
       <div className="intro container">
         <div className="intro-left">
-          <section id='hero'><Hero/></section>
-          <section id='about'><AboutMe/></section>
+          <section id='hero' ref={heroRef} className={`appear ${heroInView ? "in-view" : ""}`}>
+            <Hero/>
+          </section>
+          <section id='about' ref={aboutRef} className={`appear ${aboutInView ? "in-view" : ""}`}>
+            <AboutMe/>
+          </section>
         </div>
 
         <aside className='intro-right'>
@@ -26,13 +39,21 @@ const App = () => {
         </aside>        
       </div>
 
-      <section id='experience' className="experience container"><Experience/></section>
-      <section id='skills' className='skills container'><Skills/></section>
-      <section id='projects' className='projects container'><Projects/></section>
-      <section id='contact' className='contact container'><Contact/></section>
-      <section id='footer' className='footer container'><Footer/></section>
-
-     
+      <section id='experience' ref={expRef} className={`experience container appear ${expInView ? "in-view" : ""}`}>
+        <Experience/>
+      </section>
+      <section id='skills' ref={skillsRef} className={`skills container appear ${skillsInView ? "in-view" : ""}`}>
+        <Skills/>
+      </section>
+      <section id='projects' ref={projectsRef} className={`projects container appear ${projectsInView ? "in-view" : ""}`}>
+        <Projects/>
+      </section>
+      <section id='contact' ref={contactRef} className={`contact container appear ${contactInView ? "in-view" : ""}`}>
+        <Contact/>
+      </section>
+      <section id='footer' ref={footerRef} className={`footer container appear ${footerInView ? "in-view" : ""}`}>
+        <Footer/>
+      </section>
     </div>
   )
 }

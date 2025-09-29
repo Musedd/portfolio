@@ -17,10 +17,7 @@ export const experiences: ExperienceItem[] = [
         roleHighlight: "DevOps in Data Science",
         skills: ["Docker", "CI/CD", "GitLab", "OpenShift"],
         details: [
-            "Development of deployment pipelines for data science applications on OpenShift",
-            "Containerization of applications with Docker to ensure reproducible deployments",
-            "Implementation of reverse proxies for access restriction",
-            "Automation of deployments using CI/CD workflows in Gitlab"
+            "As a working student in DevOps for Data Science at Infineon, I developed deployment pipelines for containerized applications on OpenShift and automated workflows using GitLab CI/CD. My work also included implementing reverse proxies to ensure secure access control and contributing to reliable and reproducible deployments with Docker."
         ]
     },
     {
@@ -31,9 +28,8 @@ export const experiences: ExperienceItem[] = [
         roleHighlight: "Performance optimization in AI- Projects",
         skills: ["Python", "PyTorch", "OpenCV", "Matplotlib"],
         details: [
-            "Support in AI-based image processing projects to improve efficiency",
-            "Data collection and analysis of raw data",
-            "Classification and preprocessing of datasets"
+            "At Infineon, I contributed to AI-based image processing projects aimed at improving efficiency. My responsibilities included data collection and analysis, preprocessing and classification of datasets, and supporting the optimization of performance in applied machine learning workflows using Python, PyTorch, and OpenCV."
+
         ] 
     },
     {
@@ -44,10 +40,7 @@ export const experiences: ExperienceItem[] = [
         roleHighlight: "Machine Learning Engineer",
         skills: ["Python", "Panda", "TensorFlow", "React", "Flask"],
         details: [
-            "Supported data analysis in agile projects",
-            "Developed data-driven web applications using React for the frontend and Flask for the backend",
-            "Applied techniques such as classification, regression, and data preprocessing",
-            "Learned fundamental concepts of machine learning such as generalization, overfitting, and fairness in ML models"
+            "During my internship at Intive, I supported data analysis in agile projects and gained hands-on experience in developing data-driven web applications with React for the frontend and Flask for the backend. I applied machine learning techniques such as classification, regression, and data preprocessing, while also deepening my understanding of core concepts like generalization, overfitting, and fairness in ML models."
         ]
     },
     {
@@ -56,11 +49,10 @@ export const experiences: ExperienceItem[] = [
         employer: "Intive GmbH | Regensburg",
         role: "Working Student, ",
         roleHighlight: "QA Engineering",
-        skills: ["Kotlin", "Swift", "UI-Tests", "Unit Tests", "Jira"],
+        skills: ["Kotlin", "Swift", "UI-Tests", "Unit Tests", "Regression Tests", "Jira"],
         details: [
-            "Ensured the quality of mobile iOS and Android applications in agile teams",
-            "Developed automated UI tests in Swift and Kotlin",
-            "Created and maintained test cases and unit tests"
+            "At Intive, I contributed to QA Engineering by ensuring the quality of mobile iOS and Android applications within agile teams. I developed automated UI tests in Swift and Kotlin and created as well as maintained test cases and unit tests to support continuous delivery and reliable app performance."
+
         ]
     }
     
