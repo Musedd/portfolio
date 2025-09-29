@@ -75,9 +75,15 @@
         font-size: 1rem;
         color: #111;
 
+        &::placeholder {
+          color: #333333; /* Placeholder Farbe */
+          opacity: 1;     /* sicherstellen, dass die Farbe voll sichtbar ist */
+        }
+
         &:focus {
           outline: 2px solid #e85002;
         }
+        
       }
 
       textarea {

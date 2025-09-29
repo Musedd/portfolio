@@ -60,39 +60,48 @@ nav {
 
 
 
-@media (max-width: 840px){
-    nav{
-        padding: 15px 0;
+@media (max-width: 840px) {
+  nav {
+    padding: 15px 0;
 
-        ul {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            background: #e85002;
-            z-index: -1;
-            width: 200px;
-            padding-top: 70px;
-            transition: 0.5s;
-            flex-direction: column;
-            align-items: flex-start;
-            
-            li {
-                display: block;
-                margin: 25px 40px;
-            }
-        }
+    ul {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: #e85002;
+      z-index: -1;
+      width: 200px;
+      padding-top: 70px;
+      transition: 0.5s;
 
-        .menu-icon{
-            display: block;
-            width: 30px;
-            cursor: pointer;
-        }
+      display: flex;            /* <-- wichtig für flex-direction */
+      flex-direction: column;   /* Punkte untereinander */
+      align-items: flex-start;
 
-        .hide-mobile-menu{
-            right: -200px;
+      li {
+        display: block;
+        margin: 25px 40px;
+
+        a {
+          color: #ffffff;
+          transition: color 0.1s ease;
+
+          &:hover {
+            color: #333333 !important;     /* Hover-Farbe */
+          }
         }
+      }
     }
 
-    
+    .menu-icon {
+      display: block;
+      width: 30px;
+      cursor: pointer;
+    }
+
+    .hide-mobile-menu {
+      right: -200px;
+    }
+  }
 }
