@@ -30,11 +30,11 @@ const Navbar = () => {
     <nav className='container'>
         <p className={`brand ${showBrand ? 'visible' : 'hidden'}`}><Link to='hero' smooth={true} spy={true} offset={0} duration={500} activeClass='active'>Edvaldo<span>.</span></Link></p>
         <ul className={`menu ${mobileMenu ? '' : 'hide-mobile-menu'}`}>
-            <li><Link to='about' smooth={true} spy={true} offset={0} duration={500} activeClass='active'>About me</Link></li>
-            <li><Link to='experience' smooth={true} spy={true} offset={0} duration={500} activeClass='active'>Experience</Link></li>
-            <li><Link to='skills' smooth={true} spy={true} offset={0} duration={500} activeClass='active'>Skills</Link></li>
-            <li><Link to='projects' smooth={true} spy={true} offset={0} duration={500} activeClass='active'>Projects</Link></li>
-            <li><Link to='contact' smooth={true} spy={true} offset={0} duration={500} activeClass='active'>Contact me</Link></li>
+            <li><Link to='about' smooth={true} spy={true} offset={0} duration={500} activeClass='active' onClick={toggleMenu}>About me</Link></li>
+            <li><Link to='experience' smooth={true} spy={true} offset={0} duration={500} activeClass='active' onClick={toggleMenu}>Experience</Link></li>
+            <li><Link to='skills' smooth={true} spy={true} offset={0} duration={500} activeClass='active' onClick={toggleMenu}>Skills</Link></li>
+            <li><Link to='projects' smooth={true} spy={true} offset={0} duration={500} activeClass='active' onClick={toggleMenu}>Projects</Link></li>
+            <li><Link to='contact' smooth={true} spy={true} offset={0} duration={500} activeClass='active' onClick={toggleMenu}>Contact me</Link></li>
         </ul>
         <img src={menu_icon} alt="" className='menu-icon' onClick={toggleMenu}/>
     </nav>
