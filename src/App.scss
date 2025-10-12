@@ -57,10 +57,10 @@ section {
 }
 
 .appear {
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0;
+  transform: translateY(40px);
 
   &.in-view {
-    transform: translateY(0);
     animation: fadeUp 0.6s ease forwards;
   }
 }
