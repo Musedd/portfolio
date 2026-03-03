@@ -4,4 +4,13 @@
   text-align: center;
   color: #aaa;
   font-size: 0.875rem;
+
+  .privacy-settings-btn {
+    margin-top: 0.75rem;
+    border: none;
+    background: transparent;
+    color: #aaa;
+    padding: 0.4rem 0.7rem;
+    cursor: pointer;
+  }
 }

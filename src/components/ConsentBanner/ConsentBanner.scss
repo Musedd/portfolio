@@ -1,0 +1,45 @@
+.consent-banner,
+.consent-settings {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  background: #111;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1rem;
+  z-index: 50;
+}
+
+.consent-settings {
+  bottom: 5.5rem;
+}
+
+.consent-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+
+  button {
+    border: 1px solid #666;
+    background: transparent;
+    color: #fff;
+    padding: 0.4rem 0.7rem;
+    cursor: pointer;
+  }
+
+  .accept {
+    background: #e85002;
+    border-color: #e85002;
+  }
+}
+
+.close-settings {
+  margin-top: 0.75rem;
+  background: transparent;
+  color: #aaa;
+  border: none;
+  cursor: pointer;
+}

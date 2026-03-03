@@ -9,6 +9,7 @@ import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 import { useInView } from './hooks/useInView'
+import ConsentBanner from './components/ConsentBanner/ConsentBanner'
 
 const App = () => {
   const { ref: heroRef, inView: heroInView } = useInView(0.2)
@@ -53,6 +54,7 @@ const App = () => {
       <section id='footer' ref={footerRef} className={`footer container appear ${footerInView ? "in-view" : ""}`}>
         <Footer/>
       </section>
+      <ConsentBanner />
     </div>
   )
 }
