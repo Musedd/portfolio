@@ -6,7 +6,7 @@ const AboutMe = () => {
         <div className="aboutme-content">
             <h1 className='title'>About me</h1>
             <p className='caption'>
-              I'm a Computer Engineering student in my final semester, passionate about Cloud Computing,
+              i'm a Computer Engineering student in my final semester, passionate about Cloud Computing,
               DevOps, and Web Development. During my studies, I discovered my enthusiasm for coding
               and quickly realized how much I enjoy turning ideas into real, functional projects.<br/>
 
