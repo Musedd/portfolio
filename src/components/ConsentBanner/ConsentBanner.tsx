@@ -40,39 +40,51 @@ const ConsentBanner = () => {
     setSettingsOpen(false);
   };
 
+  const resetConsent = () => {
+    clearConsent();
+    setSettingsOpen(false);
+  };
+
   const isInitialBannerVisible = consent === null;
 
   return (
     <>
       {isInitialBannerVisible && (
-        <div className="consent-banner" role="dialog" aria-live="polite" aria-label="Consent Banner">
-          <p>
-            Diese Website nutzt optionale Analytics erst nach Einwilligung.
-          </p>
+        <div
+          className="consent-banner"
+          role="dialog"
+          aria-live="polite"
+          aria-label="Consent Banner"
+        >
+          <p>This website uses optional analytics only after your consent.</p>
           <div className="consent-actions">
             <button type="button" onClick={rejectOptional}>
-              Nur notwendige
+              Only necessary
             </button>
             <button type="button" className="accept" onClick={acceptAll}>
-              Alle akzeptieren
+              Accept all
             </button>
           </div>
         </div>
       )}
 
       {settingsOpen && (
-        <div className="consent-settings" role="dialog" aria-label="Datenschutz Einstellungen">
-          <p>Datenschutz-Einstellungen</p>
-          <p>Analytics wird nur mit Einwilligung geladen.</p>
+        <div
+          className="consent-settings"
+          role="dialog"
+          aria-label="Datenschutz Einstellungen"
+        >
+          <p>Privacy settings</p>
+          <p>Analytics is only loaded with your consent.</p>
           <div className="consent-actions">
             <button type="button" onClick={rejectOptional}>
-              Nur notwendige
+              Only necessary
             </button>
             <button type="button" className="accept" onClick={acceptAll}>
-              Alle akzeptieren
+              Accept all
             </button>
-            <button type="button" onClick={clearConsent}>
-              Einwilligung zuruecksetzen
+            <button type="button" onClick={resetConsent}>
+              Reset consent
             </button>
           </div>
           <button
@@ -80,7 +92,7 @@ const ConsentBanner = () => {
             className="close-settings"
             onClick={() => setSettingsOpen(false)}
           >
-            Schliessen
+            Close
           </button>
         </div>
       )}
