@@ -13,7 +13,7 @@ const letterVariants: Variants = {
 
 const Letter = ({ char }: { char: string }) => (
   <motion.span variants={letterVariants} style={{ display: "inline-block" }}>
-    {char === " " ? " " : char}
+    {char === " " ? " " : char}
   </motion.span>
 );
 
@@ -30,13 +30,14 @@ const Hero = () => {
           {"Hi I'm ".split("").map((char, i) => (
             <Letter key={i} char={char} />
           ))}
-          <br />
-          <span className="accent">
-            {"Edvaldo".split("").map((char, i) => (
-              <Letter key={i} char={char} />
-            ))}
+          <span style={{ display: "block" }}>
+            <span className="accent">
+              {"Edvaldo".split("").map((char, i) => (
+                <Letter key={i} char={char} />
+              ))}
+            </span>
+            <Letter char="." />
           </span>
-          <Letter char="." />
         </motion.h1>
         <p className="caption">
           <span className="accent">Software Developer</span> based in{" "}
