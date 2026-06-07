@@ -8,10 +8,10 @@ import Skills from './components/Skills/Skills'
 import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
-import { motion } from 'framer-motion'
+import { motion, type Variants } from 'framer-motion'
 import ConsentBanner from './components/ConsentBanner/ConsentBanner'
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
 }
