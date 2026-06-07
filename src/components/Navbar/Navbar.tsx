@@ -1,9 +1,14 @@
-import  { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Navbar.scss'
-import menu_icon from '../../assets/menu-icon.png'
 import { Link } from "react-scroll";
 
-
+const HamburgerIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect y="4" width="24" height="2.5" rx="1.25" fill="currentColor"/>
+    <rect y="11" width="24" height="2.5" rx="1.25" fill="currentColor"/>
+    <rect y="18" width="24" height="2.5" rx="1.25" fill="currentColor"/>
+  </svg>
+)
 
 const Navbar = () => {
   const [showBrand, setShowBrand] = useState(false);
@@ -22,22 +27,29 @@ const Navbar = () => {
   }, []);
 
   const [mobileMenu, setMobileMenu] = useState(false);
-  const toggleMenu = () => {
-    mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
-  }
+  const toggleMenu = () => setMobileMenu(prev => !prev);
 
   return (
+    <>
     <nav className='container'>
-        <p className={`brand ${showBrand ? 'visible' : 'hidden'}`}><Link to='hero' smooth={true} spy={true} offset={0} duration={500} activeClass='active'>Edvaldo<span>.</span></Link></p>
-        <ul className={`menu ${mobileMenu ? '' : 'hide-mobile-menu'}`}>
-            <li><Link to='about' smooth={true} spy={true} offset={0} duration={500} activeClass='active' onClick={toggleMenu}>About me</Link></li>
-            <li><Link to='experience' smooth={true} spy={true} offset={0} duration={500} activeClass='active' onClick={toggleMenu}>Experience</Link></li>
-            <li><Link to='skills' smooth={true} spy={true} offset={0} duration={500} activeClass='active' onClick={toggleMenu}>Skills</Link></li>
-            <li><Link to='projects' smooth={true} spy={true} offset={0} duration={500} activeClass='active' onClick={toggleMenu}>Projects</Link></li>
-            <li><Link to='contact' smooth={true} spy={true} offset={0} duration={500} activeClass='active' onClick={toggleMenu}>Contact me</Link></li>
-        </ul>
-        <img src={menu_icon} alt="" className='menu-icon' onClick={toggleMenu}/>
+      <p className={`brand ${showBrand ? 'visible' : 'hidden'}`}>
+        <Link to='hero' smooth={true} spy={true} offset={0} duration={500} activeClass='active'>
+          Edvaldo<span>.</span>
+        </Link>
+      </p>
+      <ul className={`menu ${mobileMenu ? '' : 'hide-mobile-menu'}`}>
+        <li><Link to='about' smooth={true} spy={true} offset={0} duration={500} activeClass='active' onClick={toggleMenu}>About me</Link></li>
+        <li><Link to='experience' smooth={true} spy={true} offset={0} duration={500} activeClass='active' onClick={toggleMenu}>Experience</Link></li>
+        <li><Link to='skills' smooth={true} spy={true} offset={0} duration={500} activeClass='active' onClick={toggleMenu}>Skills</Link></li>
+        <li><Link to='projects' smooth={true} spy={true} offset={0} duration={500} activeClass='active' onClick={toggleMenu}>Projects</Link></li>
+        <li><Link to='contact' smooth={true} spy={true} offset={0} duration={500} activeClass='active' onClick={toggleMenu}>Contact me</Link></li>
+      </ul>
+      <button className='menu-icon' onClick={toggleMenu} aria-label="Toggle menu">
+        <HamburgerIcon />
+      </button>
     </nav>
+    {mobileMenu && <div className="menu-backdrop" onClick={toggleMenu} />}
+    </>
   )
 }
 
