@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import "./Contact.scss";
+import { motion } from "framer-motion";
 import { GithubIcon, LinkedInIcon, MailIcon } from "../../assets/icons";
 
 const Contact = () => {
@@ -60,7 +61,12 @@ const Contact = () => {
             rows={6}
             required
           />
-          <button type="submit">Submit</button>
+          <motion.button
+            type="submit"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+          >Submit</motion.button>
         </form>
         <span>{result}</span>
       </div>

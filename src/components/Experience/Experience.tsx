@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './Experience.scss'
+import { motion } from 'framer-motion'
 import { experiences } from '../../data/experienceData'
 import type { ExperienceItem } from '../../data/experienceData'
 import ExperienceDetailView from '../ExperienceDetailView/ExperienceDetailView'
@@ -51,9 +52,15 @@ const Experience = () => {
 
         {selected && (
           <div className="experience-detail-mobile">
-            <button className="close-btn" onClick={handleClose}>
+            <motion.button
+              className="close-btn"
+              onClick={handleClose}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+            >
               ×
-            </button>
+            </motion.button>
             <ExperienceDetailView experience={selected} />
           </div>
         )}

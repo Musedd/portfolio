@@ -1,62 +1,85 @@
 .hero {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding-top: 200px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between ;
-    gap: clamp(2rem, 6vw, 5rem);
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 200px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: clamp(2rem, 6vw, 5rem);
 
-    .hero-content {
-        max-width: 800px;
-        text-align: left;
+  .hero-content {
+    max-width: 800px;
+    text-align: left;
 
-        .title {
-            font-size: clamp(2.75rem, 7vw, 6rem);
-            line-height: 1.05;
-            font-weight: 650;
-            color: #ffffff;
-        }
-
-        .accent {
-            color: #e85002;
-        }
-
-        .caption {
-            color: #ffffff;
-            font-size: clamp(1rem, 2vw, 1.25rem);
-        }
+    .title {
+      font-size: clamp(2.75rem, 7vw, 6rem);
+      line-height: 1.05;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.02em;
     }
 
-    .hero-photo img{
-        width: min(420px, 40vw);
-        object-fit: cover;
-        position: sticky;
-    }
+    .accent {
+      color: var(--accent);
+      position: relative;
 
-    .content-side {
+      &::after {
+        content: '';
         position: absolute;
-        left: 0;
-        bottom: 5rem;
-        color: #a7a7a7;
-        transform: rotate(270deg);
-        font-size: 12px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        opacity: 0.5;
+        inset: -20px -40px;
+        background: radial-gradient(ellipse at center, rgba(232, 80, 2, 0.18) 0%, transparent 70%);
+        pointer-events: none;
+        z-index: -1;
+      }
     }
 
+    .caption {
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      margin-top: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+
+      .accent {
+        color: var(--text);
+        font-weight: 600;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .hero-photo img {
+    width: min(420px, 40vw);
+    object-fit: cover;
+    position: sticky;
+    border-radius: 16px;
+  }
+
+  .content-side {
+    position: absolute;
+    left: 0;
+    bottom: 5rem;
+    color: var(--muted);
+    transform: rotate(270deg);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.4;
+  }
 }
+
 @media (max-width: 900px) {
   .hero {
     .hero-content {
-      text-align: center; /* Text auf Mobile mittig */
+      text-align: center;
+
       h1 {
         font-size: clamp(2rem, 6vw, 3rem);
       }
     }
   }
 }
-
-

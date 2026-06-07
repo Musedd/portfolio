@@ -1,25 +1,43 @@
-    .aboutme-content {
-        text-align: left;
-        max-width: 800px;
+.aboutme-content {
+  text-align: left;
+  max-width: 800px;
 
-        .title {
-            color: white;
-            font-size: clamp(3rem, 4vw, 4rem);
-        }
+  .title {
+    color: var(--text);
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0.5rem;
 
-        .caption {
-            margin-top: 20px;
-            color: #a7a7a7;
-            font-size: clamp(1rem, 1.2vw, 1.125rem);
-            line-height: 1.6;
-        }
+    &::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+      margin-top: 0.5rem;
     }
+  }
 
-    @media (max-width: 900px) {
-  .aboutme-content {
-    text-align: center; /* Text mittig */
-    margin: 0 auto;     /* Block mittig */
-    padding: 0 1rem;    /* etwas Innenabstand */
+  .caption {
+    margin-top: 1.5rem;
+    color: var(--muted);
+    font-size: clamp(1rem, 1.2vw, 1.1rem);
+    line-height: 1.8;
   }
 }
-    
+
+@media (max-width: 900px) {
+  .aboutme-content {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    .title::after {
+      margin: 0.5rem auto 0;
+    }
+  }
+}

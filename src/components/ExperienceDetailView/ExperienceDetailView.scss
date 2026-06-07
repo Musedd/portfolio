@@ -1,19 +1,43 @@
 .detail-view-empty {
-    color: #333333;
+  color: var(--muted);
+  font-size: 0.9rem;
+  opacity: 0.6;
 }
 
 .detail-view {
-    background: #a7a7a7;
-    max-height: fit-content;
-    color: #333333;
-    padding: 2rem;
-    border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  max-height: fit-content;
+  color: var(--text);
+  padding: 2rem;
+  border-radius: 16px;
 
-    ul {
-        margin-top: 1rem;
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
 
-        li {
-            list-style: none;
-        }
+  ul {
+    margin-top: 1rem;
+
+    li {
+      list-style: none;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      padding-left: 1rem;
+      position: relative;
+
+      &::before {
+        content: '–';
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+      }
     }
+  }
 }

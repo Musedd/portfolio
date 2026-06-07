@@ -8,52 +8,101 @@ import Skills from './components/Skills/Skills'
 import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
-import { useInView } from './hooks/useInView'
+import { motion } from 'framer-motion'
 import ConsentBanner from './components/ConsentBanner/ConsentBanner'
 
-const App = () => {
-  const { ref: heroRef, inView: heroInView } = useInView(0.2)
-  const { ref: aboutRef, inView: aboutInView } = useInView(0.2)
-  const { ref: expRef, inView: expInView } = useInView(0.2)
-  const { ref: skillsRef, inView: skillsInView } = useInView(0.2)
-  const { ref: projectsRef, inView: projectsInView } = useInView(0.2)
-  const { ref: contactRef, inView: contactInView } = useInView(0.2)
-  const { ref: footerRef, inView: footerInView } = useInView(0.2)
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+}
 
+const App = () => {
   return (
     <div>
       <Navbar/>
 
       <div className="intro container">
         <div className="intro-left">
-          <section id='hero' ref={heroRef} className={`appear ${heroInView ? "in-view" : ""}`}>
+          <motion.section
+            id='hero'
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
             <Hero/>
-          </section>
-          <section id='about' ref={aboutRef} className={`appear ${aboutInView ? "in-view" : ""}`}>
+          </motion.section>
+          <motion.section
+            id='about'
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
             <AboutMe/>
-          </section>
+          </motion.section>
         </div>
 
         <aside className='intro-right'>
           <img className='hero-photo' src={profileImg} alt="" />
-        </aside>        
+        </aside>
       </div>
 
-      <section id='experience' ref={expRef} className={`experience container appear ${expInView ? "in-view" : ""}`}>
+      <motion.section
+        id='experience'
+        className="experience container"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <Experience/>
-      </section>
-      <section id='skills' ref={skillsRef} className={`skills container appear ${skillsInView ? "in-view" : ""}`}>
+      </motion.section>
+
+      <motion.section
+        id='skills'
+        className="skills container"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <Skills/>
-      </section>
-      <section id='projects' ref={projectsRef} className={`projects container appear ${projectsInView ? "in-view" : ""}`}>
+      </motion.section>
+
+      <motion.section
+        id='projects'
+        className="projects container"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <Projects/>
-      </section>
-      <section id='contact' ref={contactRef} className={`contact container appear ${contactInView ? "in-view" : ""}`}>
+      </motion.section>
+
+      <motion.section
+        id='contact'
+        className="contact container"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <Contact/>
-      </section>
-      <section id='footer' ref={footerRef} className={`footer container appear ${footerInView ? "in-view" : ""}`}>
+      </motion.section>
+
+      <motion.section
+        id='footer'
+        className="footer container"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <Footer/>
-      </section>
+      </motion.section>
+
       <ConsentBanner />
     </div>
   )

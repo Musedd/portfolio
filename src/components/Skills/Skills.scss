@@ -1,62 +1,82 @@
 .skills {
-  color: #ffffff;
+  color: var(--text);
   margin-top: 10px;
 
   .title {
-    font-size: clamp(3rem, 4vw, 4rem);
-    margin-bottom: 2rem;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+      margin-top: 0.5rem;
+    }
   }
 
   .skill-list-container {
+    margin-top: 2rem;
+
     .skill-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 1.25rem;
       list-style: none;
       padding: 0;
       margin: 0;
     }
 
     .skill-card {
-      background: #a7a7a7;
-      aspect-ratio: 1 / 1;       
-      border-radius: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      aspect-ratio: 1 / 1;
+      border-radius: 16px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      position: relative;        
+      position: relative;
       overflow: hidden;
       cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 
       img {
-        width: 60%;
-        height: 60%;
+        width: 52%;
+        height: 52%;
         object-fit: contain;
         z-index: 1;
       }
 
       p {
         position: absolute;
-        bottom: 0;               
+        bottom: 0;
         left: 0;
         right: 0;
-        background: rgba(0, 0, 0, 0.6); 
+        background: rgba(8, 8, 8, 0.85);
         color: #fff;
-        font-size: 1rem;
+        font-size: 0.85rem;
         font-weight: 600;
         padding: 0.5rem;
         text-align: center;
         opacity: 0;
         transform: translateY(100%);
-        transition: opacity 0.3s ease, transform 0.3s ease;
+        transition: opacity 0.25s ease, transform 0.25s ease;
         z-index: 2;
       }
 
       &:hover {
+        border-color: var(--accent-border);
+        box-shadow: 0 0 20px rgba(232, 80, 2, 0.12);
         transform: translateY(-4px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 
         p {
           opacity: 1;
